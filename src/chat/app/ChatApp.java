@@ -19,7 +19,7 @@ public class ChatApp {
         System.out.print("Enter Last Name: ");
         String lName = input.nextLine();
         
-        System.out.print("Enter Username: ");
+        System.out.print("Please provide a username:");
         String user = input.nextLine();
         
         System.out.print("Enter Password: ");
