@@ -1,46 +1,41 @@
-ChatApp Project - Part 1
-Project Description
-This Java-based Chat Application (Part 1) focuses on a secure User Authentication System. It handles user registration with strict validation rules, secure data storage within the application's runtime, and a login verification system.
+# ChatApp - Part 1: User Authentication System
+**Developer:** Ngcebo Magagula
+**Project Version:** 1.0.0
+**Date:** April 2026
 
-The project follows a Modular Design pattern, separating the user interface (ChatApp.java), the business logic (Login.java), and automated quality assurance (LoginTest.java).
+## 1. Project Overview
+This Java-based Chat Application (Part 1) focuses on a secure **User Authentication System**. The goal is to provide a robust gateway where users must register with strict data integrity rules before they are granted access to the application.
 
-Features
-Registration Validation:
+The project is built using a **Modular Design** pattern to ensure a clean separation between the user interface (Console), the business logic (Validation), and quality assurance (Unit Testing).
 
-Username: Must contain an underscore (_) and be no more than 5 characters.
+## 2. Feature Implementation
+I have implemented specific validation logic to ensure that user data meets high security and formatting standards:
 
-Password: Minimum 8 characters, containing at least one uppercase letter, one number, and one special character.
+| Feature | Requirement | Logic Implementation |
+| :--- | :--- | :--- |
+| **Username** | Underscore + Max 5 chars | `checkUserName()` ensures the username contains `_` and validates length. |
+| **Password** | Complexity Rules | `checkPasswordComplexity()` verifies at least 8 chars, one uppercase, one digit, and one special character. |
+| **Phone Number** | SA Format | `checkCellPhoneNumber()` validates the `+27` prefix and length limit. |
+| **Authentication**| Secure Login | `loginUser()` performs a secure equality check against stored credentials. |
+| **Unit Testing** | Verified Code | `LoginTest.java` uses JUnit to automate the testing of all logic methods. |
 
-Phone Number: Must start with the South African international code +27 and be 13 characters or fewer.
+## 3. How to Run the Application
+1. **Open the Project:** Load the `com.mycompany.chatapp` package into your IDE (NetBeans, IntelliJ, or Eclipse).
+2. **Execute Main:** Run `ChatApp.java`.
+3. **Register:** Follow the console prompts. If you enter invalid data, the app will provide specific feedback.
+4. **Login:** Once successfully registered, enter your credentials to see the personalized welcome message.
+5. **Run Tests:** Right-click `LoginTest.java` and select "Run File" or "Test File" to view the JUnit report.
 
-Authentication: Verifies user-entered credentials against stored registration data.
+   ## 📺 Project Presentation
+You can watch the full technical walkthrough and demonstration of this application on YouTube:
 
-Unit Testing: Comprehensive JUnit tests ensure the validation logic is bug-free.
+**Link:** [Watch the Presentation Here](https://youtu.be/6yxX21c1gg4)
 
-Getting Started
-Prerequisites
-JDK 11 or higher.
+---
 
-An IDE (NetBeans, IntelliJ, or Eclipse).
+## 4. References (Harvard Style)
+* **Bloch, J.** 2018. *Effective Java*. 3rd ed. Boston: Addison-Wesley.
+* **Deitel, P.J. & Deitel, H.M.** 2017. *Java: How to Program, Early Objects*. 11th ed. Upper Saddle River: Pearson Education.
+* **Oracle.** 2026. *Class String*. [Online]. Available at: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html [Accessed 13 April 2026].
+* **Vogel, L.** 2021. *Unit Testing with JUnit - Tutorial*. [Online]. Available at: https://www.vogella.com/tutorials/JUnit/article.html [Accessed 13 April 2026].
 
-JUnit 4 library (for running tests).
-
-How to Run
-Run ChatApp.java to start the console application.
-
-Follow the prompts to register a new user.
-
-If registration is successful, proceed to login using the same credentials.
-
-To verify logic integrity, run LoginTest.java as a Unit Test file.
-
-References (Harvard Style)
-Note: Ensure you replace [Year] with the current year of your studies.
-
-Deitel, P.J. and Deitel, H.M. [Year]. Java: How to Program, Early Objects. 11th ed. Upper Saddle River: Pearson Education.
-
-Farrell, J. [Year]. Java Programming. 9th ed. Boston: Cengage Learning.
-
-Oracle. [Year]. Java Platform, Standard Edition 11 API Specification. [Online]. Available at: https://docs.oracle.com/en/java/javase/11/docs/api/index.html [Accessed 13 April 2026].
-
-Schildt, H. [Year]. Java: The Complete Reference. 11th ed. New York: McGraw-Hill Education.
